@@ -17,7 +17,7 @@ public class CurrencyBootstrap{
 	@Autowired
 	CacheService cacheService;
 	
-	@Scheduled(fixedRate = 3600000)
+	@Scheduled(fixedRateString ="${scheduling.fetchApiInterval}")
 	public void evictAllcachesAtIntervals() {
 		log.info("evictAllcachesAtIntervals START");
 		cacheService.evictAllCaches();
