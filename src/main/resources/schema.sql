@@ -1,0 +1,16 @@
+DROP TABLE IF EXISTS product;
+DROP TABLE IF EXISTS product_hit;
+
+CREATE TABLE Product (
+  id INT(20) PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(250) NOT NULL,
+  price DECIMAL(10,2) NOT NULL,
+  description VARCHAR(250) DEFAULT NULL,
+  active BOOLEAN DEFAULT true,
+  currency VARCHAR(250) DEFAULT NULL
+);
+
+CREATE TABLE Product_Hit (
+  id INT,
+  hit INT
+);
